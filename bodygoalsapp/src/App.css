@@ -41,7 +41,7 @@ span {
   padding: 5px;
   text-align: center;
   boorder-radius: 50px;
-  border:  1px solid hotpink;
+  border: 1px solid rgba(0,0,0,0,2);
 
 }
 
@@ -51,10 +51,29 @@ span {
   margin: 50px auto;
 }
 
-.app__controls__inputs_{
+.app__controls__inputs{
   width: 100%;
   display: flex;
   justify-content: space-around;
   align-items: center;
   flex-direction: column;
+}
+
+.app__controls__inputs input{
+  padding: 5px;
+  margin: 10px 0;
+  font-size: 18px;
+  border: 1px solid rgba(0,0,0,0,2);
+}
+
+.app__controls__inputs button{
+  padding: 5px;
+  width: 25%;
+  text-align: center;
+  color: white;
+  background: hotpink;
+  margin: 10px auto;
+  font-size: 18px;
+  boorder-radius: 5px;
+  border: 1px solid #000;
 }
