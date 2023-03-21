@@ -16,7 +16,7 @@ const  AppControlsInputs = ({ addMealsHandler}) => {
          placeholder="Calories"
          />
 
-         <button onclick={onAddMealsClick}> Add Meal </button>
+         <button onClick={onAddMealsClick}> Add Meal </button>
 
 
 
