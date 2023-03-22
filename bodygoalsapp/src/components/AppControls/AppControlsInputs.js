@@ -1,6 +1,6 @@
 import React from 'react'
 
-const  AppControlsInputs = ({ addMealsHandler}) => {
+const  AppControlsInputs = ({ addMealsHandler, calories, mealName}) => {
   const onAddMealsClick = ()=>{
     addMealsHandler()
   }

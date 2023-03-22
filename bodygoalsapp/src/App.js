@@ -12,7 +12,7 @@ const App = () => {
   const[openModal, setOpenModal] = useState(false);
 
 const addMealsHandler = () =>{
-  console.log('meal added');
+
 };
 
 
@@ -24,7 +24,7 @@ const addMealsHandler = () =>{
       <AppBar/>
       <AppControlsCounter/>
       <AppControlsDelete/>
-      <AppControlsInputs addMealsHandler= { addMealsHandler }/>
+      <AppControlsInputs addMealsHandler= { addMealsHandler } mealName={mealName} calories={calories}/>
     </div>
   );
 }
