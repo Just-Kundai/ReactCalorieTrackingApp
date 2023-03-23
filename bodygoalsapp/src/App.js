@@ -24,7 +24,8 @@ const addMealsHandler = () =>{
       <AppBar/>
       <AppControlsCounter/>
       <AppControlsDelete/>
-      <AppControlsInputs addMealsHandler= { addMealsHandler } mealName={mealName} calories={calories}/>
+      <AppControlsInputs addMealsHandler= { addMealsHandler } mealName={mealName} calories={calories} setMealName={setMealName} setCalories={setCalories}/>
+
     </div>
   );
 }
