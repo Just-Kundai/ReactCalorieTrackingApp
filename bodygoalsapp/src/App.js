@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from "react";
 import './App.css';
 import AppBar from './components/AppBar/AppBar'
 import AppControlsCounter from './components/AppControls/AppControlsCounter'
@@ -12,6 +12,7 @@ const App = () => {
   const[openModal, setOpenModal] = useState(false);
 
 const addMealsHandler = () =>{
+
 
 };
 
