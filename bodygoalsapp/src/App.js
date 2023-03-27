@@ -11,7 +11,8 @@ const App = () => {
   const [calories,setCalories] = useState(0);
   const[openModal, setOpenModal] = useState(false);
 
-const addMealsHandler = () =>{
+const addMealsHandler = () => {
+  console.log(mealName)
 
 
 };
