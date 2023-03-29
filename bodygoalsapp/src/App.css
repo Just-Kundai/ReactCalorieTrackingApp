@@ -77,3 +77,36 @@ span {
   boorder-radius: 5px;
   border: 1px solid #000;
 }
+
+.app__meals__container{
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+}
+
+.app__meals__container__wrapper{
+  height: auto;
+  width: 100%;
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.app__meals__container__wrapper__inner{
+  width: 50%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 5px solid hotpink;
+  margin: 10px 0;
+  padding: 5px;
+  font-size: 18px;
+  font-weight: 800;
+  border-radius: 5px;
+}

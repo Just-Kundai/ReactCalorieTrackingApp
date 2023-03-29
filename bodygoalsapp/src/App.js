@@ -4,7 +4,7 @@ import AppBar from './components/AppBar/AppBar'
 import AppControlsCounter from './components/AppControls/AppControlsCounter'
 import AppControlsDelete from './components/AppControls/AppControlsDelete'
 import AppControlsInputs from './components/AppControls/AppControlsInputs'
-import AppMealsList from './components/AppMealsList/AppMealsList'
+import AppMealsList from './components/AppMealsList/AppMealsList';
 
 const App = () => {
   const[meals, setMeals] = useState([]);
@@ -18,7 +18,7 @@ const addMealsHandler = () => {
   const meal = {
     mealName,
     calories,
-    id:Math.floor(Math.random() * 1000),
+    id: Math.floor(Math.random() * 1000),
   }
 
   const newMeals = oldMeals.concat(meal);
@@ -49,6 +49,10 @@ const addMealsHandler = () => {
       <AppControlsCounter/>
       <AppControlsDelete/>
       <AppControlsInputs addMealsHandler= { addMealsHandler } mealName={mealName} calories={calories} setMealName={setMealName} setCalories={setCalories}/>
+
+      <div className="app__meals__container">
+      <AppMealsList meals={meals}/>
+      </div>
 
     </div>
   );
