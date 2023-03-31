@@ -110,3 +110,16 @@ span {
   font-weight: 800;
   border-radius: 5px;
 }
+
+
+.btn__delete__meal{
+  padding: 5px;
+  outline: none;
+  text-align: center;
+  font-size: 18px;
+  color: #fff;
+  background: hotpink;
+  border-radius: 5px;
+  border: 1px solid #000;
+  
+}

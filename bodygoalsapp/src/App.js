@@ -39,7 +39,11 @@ const addMealsHandler = () => {
 
 };
 
-
+//for deleting the meal
+const deleteMealHandler = (id) => {
+  const oldMeals = [...meals];
+  const newMeals =
+}
 
 
 
