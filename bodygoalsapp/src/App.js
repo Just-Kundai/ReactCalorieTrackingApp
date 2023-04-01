@@ -5,6 +5,7 @@ import AppControlsCounter from './components/AppControls/AppControlsCounter'
 import AppControlsDelete from './components/AppControls/AppControlsDelete'
 import AppControlsInputs from './components/AppControls/AppControlsInputs'
 import AppMealsList from './components/AppMealsList/AppMealsList';
+import AppModal from './components/AppModal/AppModal';
 
 const App = () => {
   const[meals, setMeals] = useState([]);
@@ -27,8 +28,9 @@ const addMealsHandler = () => {
 
   //the if condition limits how easily I can add meals
 
-  if(calories <= 0 || mealName === ""){
-    alert("must not be empty")
+  if(calories < 0 || mealName === ""){
+    setOpenModal(true);
+
   }
     else{
       setMeals(newMeals)
@@ -41,21 +43,46 @@ const addMealsHandler = () => {
 
 //for deleting the meal
 const deleteMealHandler = (id) => {
-  const oldMeals = [...meals];
-  const newMeals =
-}
+  const oldMeals = [...meals];//spread the meals we have
+  const newMeals = oldMeals.filter((meals)=> meals.id !== id);
+
+  setMeals(newMeals);
+};
+
+const deleteAllMealsHandler = () => {
+  setMeals([]);
+
+};
+
+const total = meals
+.map(({ calories }) => calories)
+.reduce((acc, value) => acc + +value, 0);
+
+
+
 
 
 
   return (
     <div className="App">
       <AppBar/>
-      <AppControlsCounter/>
-      <AppControlsDelete/>
-      <AppControlsInputs addMealsHandler= { addMealsHandler } mealName={mealName} calories={calories} setMealName={setMealName} setCalories={setCalories}/>
+      {openModal ? <AppModal setOpenModal={setOpenModal} /> : " "}
+      <AppControlsCounter total = {total}/>
+      <AppControlsDelete
+      meals={meals}
+      deleteAllMealsHandler={deleteAllMealsHandler}
+
+      />
+      <AppControlsInputs
+      addMealsHandler= { addMealsHandler } mealName={mealName}
+      calories={calories}
+      setMealName={setMealName} setCalories={setCalories}
+      />
 
       <div className="app__meals__container">
-      <AppMealsList meals={meals}/>
+      <AppMealsList
+
+      deleteMealHandler= {deleteMealHandler}/>
       </div>
 
     </div>

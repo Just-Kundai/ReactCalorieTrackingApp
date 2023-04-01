@@ -1,10 +1,10 @@
 import React from 'react'
 
-const AppControlsCounter = ()  => {
+const AppControlsCounter = ({total})  => {
     return (
         <div className="app__controls__counter">
          <h2>
-         Total Calories: <span> 0 </span>
+         Total Calories: <span> {total} </span>
          </h2>
 
 
